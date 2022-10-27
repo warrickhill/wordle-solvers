@@ -13,15 +13,17 @@ This repo is to test different algorithms against each other.
 3. Create a dir in the solvers directory that matches the branch name
 4. Copy template.js to {your-dir}/index.js
 5. Write your solver in the exported function, commit and open a PR
+6. The first param is and obj where the keys are words than have been used and the value is the score for that word as a string. `.` not in the word, `*` in the word, but not in this spot, `!` in the correct location. `{tests: ".!*.."}`
 
 ### Rules for your solver
 
-* Vanilla JS only
-* Must not use external packages
-* No calls to external apis
-* Code must only be committed inside your dir
+- Vanilla JS only
+- Must not use external packages
+- No calls to external apis
+- Code must only be committed inside your dir
 
 ### Running the solvers
+
 ```
-node .
+yarn go
 ```

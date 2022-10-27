@@ -1,0 +1,23 @@
+{
+  "name": "wordle-solvers",
+  "version": "1.0.0",
+  "repository": "git@github.com:warrickhill/wordle-solvers.git",
+  "license": "MIT",
+  "author": "warrickhill <warrick@predictmobile.com>",
+  "main": "index.js",
+  "scripts": {
+    "format": "yarn prettier --write .",
+    "go": "node index.js"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,md,yml.yaml,scss,html}": [
+      "prettier --check"
+    ]
+  },
+  "dependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-packagejson": "^2.3.0"
+  }
+}

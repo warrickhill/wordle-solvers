@@ -17,10 +17,10 @@ This repo is to test different algorithms against each other.
 
 ### Rules for your solver
 
-- Vanilla JS only
-- Must not use external packages
-- No calls to external apis
-- Code must only be committed inside your dir
+-   Vanilla JS only
+-   Must not use external packages
+-   No calls to external apis
+-   Code must only be committed inside your dir
 
 ### Running the solvers
 

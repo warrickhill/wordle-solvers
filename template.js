@@ -1,1 +1,1 @@
-module.exports = async (used = {}, words = []) => {};
+module.exports = async (used = {}, words = []) => {}

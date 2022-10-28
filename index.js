@@ -58,6 +58,7 @@ const test = async () => {
 
     const scores = {}
     for (const word of randomWords) {
+        console.log(word)
         for (const solver in solvers) {
             if (scores[solver] === undefined) {
                 scores[solver] = 0
@@ -65,10 +66,23 @@ const test = async () => {
             const score = await runSolver(word, solvers[solver], words)
             scores[solver] += score
         }
-        console.log(word)
     }
 
-    console.log(scores)
+    const readme = fs.readFileSync(`./README.md.tmp`)
+    fs.writeFileSync(`./README.md`, readme)
+    fs.appendFileSync(`./README.md`, `| Solver | Score | Avg Guesses |\n`)
+    fs.appendFileSync(`./README.md`, `| --- | --- | --- |\n`)
+    for (const solver of Object.keys(scores).sort(
+        (a, b) => scores[b] - scores[a]
+    )) {
+        fs.appendFileSync(
+            `./README.md`,
+            `| ${solver} | ${scores[solver]} | ${(
+                6 -
+                scores[solver] / randomWords.length
+            ).toFixed(1)} |\n`
+        )
+    }
 }
 
 test()

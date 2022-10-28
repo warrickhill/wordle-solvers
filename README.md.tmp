@@ -27,8 +27,3 @@ This repo is to test different algorithms against each other.
 ```
 yarn go
 ```
-
-| Solver                     | Score | Avg Guesses |
-| -------------------------- | ----- | ----------- |
-| 3-warrickhill-ranked-words | 201   | 4.0         |
-| 1-warrickhill-random-word  | 184   | 4.2         |
